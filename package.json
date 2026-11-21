@@ -3,6 +3,6 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "build": "mkdir -p www && cp index.html www/index.html"
+    "build": "mkdir -p www && cp \"$(find . -name '*.html' -not -path './node_modules/*' -not -path './www/*' | head -1)\" www/index.html"
   }
 }
