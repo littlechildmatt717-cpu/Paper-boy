@@ -14,9 +14,105 @@ canvas{display:block}
 #n{width:54px;height:54px;border-radius:50%;background:#2a9d8f;border:4px solid #fff;font-size:26px;line-height:54px;margin-top:3px;transition:transform .15s}
 #G{position:absolute;inset:0;display:none;align-items:center;justify-content:center;flex-direction:column;background:#000a;color:#fff;font-weight:bold;font-size:4vmin}
 #G b{font-size:12vmin;color:#e63946;-webkit-text-stroke:2px #fff}
+
+#M{position:absolute;inset:0;z-index:10;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2vmin;background:linear-gradient(#0d3f4f,#128a78 55%,#3fe0a0);color:#fff;padding:env(safe-area-inset-top,0px) env(safe-area-inset-right,0px) env(safe-area-inset-bottom,0px) env(safe-area-inset-left,0px)}
+#mi svg{display:block;height:min(48vh,80vw);width:auto;border-radius:6vmin;box-shadow:0 1.2vmin 4vmin #0009}
+#mt{display:flex;flex-direction:column;align-items:center}
+#mt h1{margin:0 0 1.5vmin;font:900 7.5vmin/1 'Arial Black',Arial,sans-serif;color:#ffd23f;text-align:center;-webkit-text-stroke:.6vmin #5a3b00;text-shadow:0 .8vmin 0 #0006}
+#mt button{font:900 6vmin Arial,sans-serif;color:#fff;border:0;border-radius:999px;padding:.35em 0;width:min(52vmin,70vw);margin:1vmin;box-shadow:0 .8vmin 0 #0006;touch-action:manipulation}
+#pl{background:linear-gradient(#52e05f,#1fa83a)}#ex{background:linear-gradient(#ff6b76,#d62839)}
+#mt button:active{transform:translateY(.6vmin);box-shadow:0 .2vmin 0 #0006}
+#bye{margin:1vmin;font:bold 3.2vmin Arial,sans-serif;text-align:center}
+@media (orientation:landscape){#M{flex-direction:row;gap:6vw}#mi svg{height:min(78vh,44vw)}}
 </style></head><body>
 <div id="H"></div><div id="D">DELIVERED<div id="n">0</div></div><div id="G"><b>GAME OVER</b><span id="gs"></span></div>
-<div id="L"></div><div class="b" id="T">📰</div>
+<div id="L"></div><div class="b" id="T">📰</div><div id="M"><div id="mi"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+<defs>
+<linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0d3f4f"/><stop offset=".55" stop-color="#128a78"/><stop offset="1" stop-color="#3fe0a0"/></linearGradient>
+<linearGradient id="shirt" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#b07a44"/><stop offset="1" stop-color="#6e4524"/></linearGradient>
+<linearGradient id="skin" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffe6cf"/><stop offset="1" stop-color="#f2b98f"/></linearGradient>
+<linearGradient id="hair" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffe680"/><stop offset="1" stop-color="#f2b705"/></linearGradient>
+<linearGradient id="bask" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffc933"/><stop offset="1" stop-color="#f08a00"/></linearGradient>
+<linearGradient id="paper" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#cfd6dc"/></linearGradient>
+<g id="wheel">
+<circle r="92" fill="none" stroke="#101010" stroke-width="16"/>
+<circle r="80" fill="none" stroke="#1f78f0" stroke-width="9"/>
+<g stroke="#2d8cff" stroke-width="4" stroke-linecap="round"><line y1="-78" y2="78"/><line y1="-78" y2="78" transform="rotate(30)"/><line y1="-78" y2="78" transform="rotate(60)"/><line y1="-78" y2="78" transform="rotate(90)"/><line y1="-78" y2="78" transform="rotate(120)"/><line y1="-78" y2="78" transform="rotate(150)"/></g>
+<circle r="12" fill="#9aa5b1"/><circle r="5" fill="#46505c"/>
+</g>
+</defs>
+<rect width="512" height="512" fill="url(#bg)"/>
+<path d="M0,385 Q220,400 400,512 L0,512Z" fill="#0a0a0a"/>
+<path d="M0,382 Q222,397 404,512" fill="none" stroke="#e4e4e4" stroke-width="4" opacity=".55"/>
+<ellipse cx="200" cy="468" rx="190" ry="14" fill="#000" opacity=".35"/>
+<!-- thrown newspaper -->
+<path d="M262,100 Q330,62 392,52" fill="none" stroke="#cdeee6" stroke-width="5" stroke-linecap="round" opacity=".45"/>
+<path d="M285,118 Q340,84 380,76" fill="none" stroke="#cdeee6" stroke-width="3" stroke-linecap="round" opacity=".3"/>
+<g transform="rotate(-24 420 44)"><rect x="378" y="34" width="96" height="20" rx="10" fill="url(#paper)" stroke="#9aa5ad" stroke-width="2"/><ellipse cx="476" cy="44" rx="6" ry="10" fill="#e9edf0" stroke="#9aa5ad" stroke-width="2"/></g>
+<!-- wheels -->
+<use href="#wheel" transform="translate(105 365) scale(.64)"/>
+<use href="#wheel" transform="translate(300 370)"/>
+<!-- frame -->
+<g fill="none" stroke="#1f78f0" stroke-width="14" stroke-linecap="round" stroke-linejoin="round">
+<path d="M105,365 L185,395 L150,258 L105,365"/>
+<path d="M150,258 L252,232 L185,395"/>
+<path d="M252,232 L300,370"/>
+</g>
+<g fill="none" stroke="#5aa6ff" stroke-width="4" stroke-linecap="round" opacity=".7"><path d="M150,258 L252,232"/><path d="M252,232 L300,370"/></g>
+<circle cx="185" cy="395" r="16" fill="#8892a0"/><circle cx="185" cy="395" r="7" fill="#3b4350"/>
+<!-- back leg -->
+<path d="M165,268 L140,342 L128,405" fill="none" stroke="#e7ad84" stroke-width="30" stroke-linecap="round" stroke-linejoin="round"/>
+<ellipse cx="124" cy="412" rx="30" ry="12" fill="#222"/>
+<!-- saddle and shorts -->
+<ellipse cx="146" cy="262" rx="40" ry="11" fill="#1c1c1c"/>
+<path d="M112,246 L206,226 L232,284 L150,304 Z" fill="#6b4423"/>
+<path d="M112,246 L206,226 L214,244 L118,264Z" fill="#8b5a2b" opacity=".6"/>
+<!-- torso -->
+<path d="M92,162 Q140,138 190,156 L210,236 L130,268 L104,250 Z" fill="url(#shirt)"/>
+<path d="M104,170 Q124,158 150,160 L150,200 Q122,204 104,196Z" fill="#fff" opacity=".12"/>
+<path d="M126,150 L146,176 L172,152" fill="#a8723c" stroke="#6b4423" stroke-width="3" stroke-linejoin="round"/>
+<!-- front leg -->
+<path d="M180,272 L240,326 L196,388" fill="none" stroke="url(#skin)" stroke-width="32" stroke-linecap="round" stroke-linejoin="round"/>
+<ellipse cx="190" cy="400" rx="34" ry="14" fill="#2b2b2b"/><ellipse cx="184" cy="396" rx="20" ry="6" fill="#555" opacity=".6"/>
+<!-- basket and newspapers -->
+<g stroke="#aab3bb" stroke-width="2">
+<rect x="232" y="150" width="26" height="76" rx="12" fill="url(#paper)"/><rect x="258" y="140" width="26" height="86" rx="12" fill="url(#paper)"/>
+<rect x="286" y="152" width="26" height="74" rx="12" fill="url(#paper)"/><rect x="212" y="162" width="24" height="64" rx="11" fill="url(#paper)"/>
+</g>
+<path d="M196,205 L346,200 L356,224 L190,230Z" fill="#2c2412"/>
+<path d="M190,230 L356,224 L350,290 L196,294Z" fill="url(#bask)"/>
+<path d="M190,230 L356,224" stroke="#161616" stroke-width="9" stroke-linecap="round"/>
+<path d="M200,244 L346,239" stroke="#ffe08a" stroke-width="4" opacity=".6"/>
+<path d="M196,294 L350,290" stroke="#161616" stroke-width="7" stroke-linecap="round"/>
+<!-- handlebar -->
+<path d="M252,232 L228,214 L206,208" fill="none" stroke="#1f78f0" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+<!-- arms -->
+<path d="M110,176 L136,222" stroke="#8b5a2b" stroke-width="34" stroke-linecap="round" fill="none"/>
+<path d="M136,222 L202,212" stroke="url(#skin)" stroke-width="22" stroke-linecap="round" fill="none"/>
+<circle cx="206" cy="210" r="14" fill="#f5c6a0"/>
+<path d="M172,170 L226,172" stroke="#8b5a2b" stroke-width="34" stroke-linecap="round" fill="none"/>
+<path d="M226,172 L284,150" stroke="url(#skin)" stroke-width="24" stroke-linecap="round" fill="none"/>
+<circle cx="292" cy="146" r="17" fill="#f5c6a0"/><path d="M286,134 Q296,128 304,136" stroke="#e0a07a" stroke-width="3" fill="none" stroke-linecap="round"/>
+<!-- head -->
+<rect x="126" y="140" width="34" height="30" rx="10" fill="#e7ad84"/>
+<circle cx="97" cy="110" r="12" fill="#f5c6a0"/>
+<circle cx="140" cy="100" r="52" fill="url(#skin)"/>
+<ellipse cx="124" cy="82" rx="20" ry="12" fill="#fff" opacity=".25"/>
+<ellipse cx="156" cy="100" rx="6.5" ry="8.5" fill="#222"/><ellipse cx="184" cy="102" rx="6" ry="8" fill="#222"/>
+<circle cx="158" cy="96" r="2.6" fill="#fff"/><circle cx="186" cy="98" r="2.4" fill="#fff"/>
+<path d="M146,86 Q157,79 168,85 M174,86 Q185,80 195,87" stroke="#d99a00" stroke-width="4.5" fill="none" stroke-linecap="round"/>
+<path d="M170,108 Q166,118 173,119" stroke="#d9946c" stroke-width="3" fill="none" stroke-linecap="round"/>
+<circle cx="148" cy="118" r="7" fill="#ff8f9c" opacity=".5"/><circle cx="181" cy="119" r="7" fill="#ff8f9c" opacity=".5"/>
+<path d="M154,126 Q170,146 186,123 Q170,134 154,126Z" fill="#fff" stroke="#8a3b2b" stroke-width="3.5" stroke-linejoin="round"/>
+<!-- blond spiky hair -->
+<g stroke="#d9a000" stroke-width="2.5" stroke-linejoin="round" fill="url(#hair)">
+<path d="M90,102 Q92,52 140,48 Q190,52 194,104 Q176,80 142,82 Q112,82 90,102Z"/>
+<path d="M96,76 L70,44 L118,64Z"/><path d="M114,60 L104,20 L142,52Z"/><path d="M136,52 L150,10 L164,54Z"/>
+<path d="M158,54 L196,18 L184,70Z"/><path d="M178,68 L218,50 L194,94Z"/><path d="M92,98 L66,88 L100,120Z"/>
+</g>
+<path d="M104,66 Q122,56 140,58" stroke="#fff6b8" stroke-width="4" fill="none" stroke-linecap="round" opacity=".7"/>
+</svg>
+</div><div id="mt"><h1>PAPER BOY<br>DASH</h1><button id="pl">PLAY</button><button id="ex">EXIT</button><div id="bye"></div></div></div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 <script>
 const Q=Math.PI/2;
@@ -119,7 +215,8 @@ const ui=()=>{Hd.innerHTML=[0,1,2].map(i=>'<i class="'+(i<hearts?'':'o')+'">♥<
 function reset(){obs.forEach(o=>kill(o.g));hs.forEach(kill);papers.forEach(p=>kill(p.g));picks.forEach(p=>kill(p.m));obs=[];hs=[];papers=[];picks=[];
  hearts=3;delivered=0;sp=6.5;py=0;vy=0;duck=0;inv=0;state=0;sT=1;pT=14;oc=0;off=0;cd=0;lastN='';Gg.style.display='none';ui();hx=-18;while(hx<30)hx=mkHouse(hx,-1)}
 function throwP(){if(state||cd>0)return;cd=.3;const g=new THREE.Group();Cy(g,.08,.4,'#f2f2f2',0,0,0,[0,0,Q]);Cy(g,.085,.08,'#c0392b',0,0,0,[0,0,Q]);sc.add(g);let best=null,bd=99;hs.forEach(h=>{const d=h.position.x-px;if(!h.userData.done&&d>-1&&d<14&&d<bd){bd=d;best=h}});const sd=best?best.userData.side:-1,T=.6,tz=sd<0?-7.3:7.3,tx=(best?best.position.x:px+6)-sp*T;papers.push({g,x:px+.5,y:py+(duck?.7:1.5),z:0,vx:(tx-px)/T,vy:7.8,vz:tz/T})}
-function step(dt){
+let started=0;
+function step(dt){if(!started)return;
  if(state){overT-=dt;if(overT<=0)reset();return}
  cd-=dt;time+=dt;
  sp+=((K.f?11:K.b?2.5:6.5)-sp)*Math.min(1,4*dt);off+=sp*dt;
@@ -150,4 +247,7 @@ function step(dt){
  lamps.forEach((l,i)=>l.position.x=(((i>>1)*12-off)%48+48)%48-14);slabs.forEach((s,i)=>s.position.x=(((i>>1)*3-off)%54+54)%54-14);trees.forEach((t,i)=>t.position.x=(((i>>1)*8-off)%56+56)%56-14);clouds.forEach(c=>{c.position.x-=.6*dt;if(c.position.x<-45)c.position.x=45})}
 function loop(ts){const dt=Math.min(.05,(ts-last)/1000||.016);last=ts;step(dt);R.render(sc,cam);requestAnimationFrame(loop)}
 reset();requestAnimationFrame(loop);
+
+document.getElementById('pl').onclick=()=>{started=1;document.getElementById('M').style.display='none';reset()};
+document.getElementById('ex').onclick=()=>{const A=window.Capacitor&&Capacitor.Plugins&&Capacitor.Plugins.App;if(A&&A.exitApp){A.exitApp();return}window.close();document.getElementById('bye').textContent='Thanks for playing! You can close this page now.'};
 </script></body></html>
